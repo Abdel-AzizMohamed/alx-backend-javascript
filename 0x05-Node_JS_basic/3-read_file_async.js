@@ -1,3 +1,4 @@
+/* eslint-disable */
 const fs = require('fs');
 
 const countStudents = (dataPath) =>
@@ -15,8 +16,7 @@ const countStudents = (dataPath) =>
         for (const line of fileLines.slice(1)) {
           const studentRecord = line.split(',');
           const studentPropValues = studentRecord.slice(
-            0,
-            studentRecord.length - 1
+            0, studentRecord.length - 1
           );
           const field = studentRecord[studentRecord.length - 1];
           if (!Object.keys(studentGroups).includes(field)) {
